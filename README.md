@@ -124,8 +124,8 @@ les variables globales sont au nombre de trois : .data, .rodata et .bss. Elles s
 |                4 | RESD                |Reserve Doubleword |
 |                8 | RESQ                |Reserve Quadword   |
 
-<pre><code>
 
+```arm
 section .data
  i4 DD 42        ; entier sur 4 bytes
  section .text 
@@ -136,4 +136,4 @@ section .data
  mov ecx, [rax] ; rax contient l'adresse de i4, donc  
                 ; [rax] = [i4] et ici ecx <-- _contenu_ de ce qui se trouve   
                 ; à l'adresse rax = i4 et s'étend sur 4 bytes (car ecx), soit 42
-</code></pre>
+```
