@@ -95,3 +95,41 @@ Les instructions de saut conditionnel permettent d’effectuer un saut si une ce
 |bt rax, 0 <br>  jc label   | Saut si rax est impair |rax : représentation par position ou complément à 2 |
 |cmp rax, rbx <br> js label | Saut si rax < rbx      |rax et rbx : cpt. à 2 |
 |cmp rax, rbx <br> jnz label| Saut si rax ̸= rbx      |rax et rbx : rep. / position ou cpt. à 2 |
+
+
+## Variables globales
+
+les variables globales sont au nombre de trois : .data, .rodata et .bss. Elles sont créées en mémoire lors du chargement de l’exécutable et y résident jusqu’à sa fin.
+* La section .bss est utilisée pour les variables implicitement initialisées à zéro au démarrage du programme.
+* Les section .data et .rodata sont initialisées avec les valeurs qu’elles ont dans le fichier exécutable.
+    * la section .rodata n'est disponible qu en lecture seule.
+    * la section .data permet de modifier les valeurs des variables qui ont été defini dedans.
+
+|Taille (en bytes) |Pseudo-instruction |Signification     |
+|:-----------------|:------------------|:-----------------|
+|                1 | DB                |Define Byte       |
+|                2 | DW                |Define Word       |
+|                4 | DD                |Define Doubleword |
+|                8 | DQ                |Define Quadword   |
+
+
+|Taille (en bytes) |Pseudo-instruction |Signification     |
+|:-----------------|:------------------|:-----------------|
+|                1 | RESB                |Reserve Byte       |
+|                2 | RESW                |Reserve Word       |
+|                4 | RESD                |Reserve Doubleword |
+|                8 | RESQ                |Reserve Quadword   |
+
+<pre><code>
+
+section .data
+ i4 DD 42        ; entier sur 4 bytes
+ section .text 
+ ; ... 
+ mov rax, i4    ; rax <-- _adresse_ (8 bytes) de i4   
+ mov ebx, [i4]  ; ebx <-- _contenu_ de ce qui se trouve 
+                ; à l'adresse i4 et s'étend sur 4 bytes (car ebx), soit 42  
+ mov ecx, [rax] ; rax contient l'adresse de i4, donc  
+                ; [rax] = [i4] et ici ecx <-- _contenu_ de ce qui se trouve   
+                ; à l'adresse rax = i4 et s'étend sur 4 bytes (car ecx), soit 42
+</code></pre>
