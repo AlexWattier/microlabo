@@ -1,4 +1,4 @@
-# laboratoire assemleur
+# laboratoire assembleur
 
 
 ## General Info
@@ -52,8 +52,9 @@ en reutilisant les instruction du dessus et en crée un masque nous obtenons cec
 Le zero flag (ZF) n’est pas modifié. L’overflow flag (OF) et le sign flag (SF) sont indéfinis. 
 
 ## Instruction de saut et alternatives
-****************************************
+
 ### Comparaison
+****************************************
 
 | Instruction  | Effet        |
 | :------------|:-------------|
@@ -70,14 +71,17 @@ SF ← bit de signe de temp : \
 1 si X < Y, 0 sinon 
 
 ### Label
+****************************************
 
 Les labels sont des repère que le programmeur met dans le code afin de donner un nom à une ligne du programme.
 
 ### Saut inconditionnel
+****************************************
 
 L’instruction jmp permet d’effectuer un saut vers un certain label. Mais n'effectuera pas les instructions se trouvant entre le jmp et ce label.
 
 ### Sauts conditionnels
+****************************************
 
 Les instructions de saut conditionnel permettent d’effectuer un saut si une certaine condition est vraie.
 
