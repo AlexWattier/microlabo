@@ -8,14 +8,14 @@ main:
 
     mov al, 'd' ; on charge une lettre minuscule dans al 
 
-    mov bl ,al      ; à compléter de sorte que ah contienne
-    btr bx , 5      ; la même lettre que al mais en majuscule
+    ;mov bl ,al      ; à compléter de sorte que ah contienne
+    ;btr bx , 5      ; la même lettre que al mais en majuscule
     ; ........       ; (cela doit fonctionner pour toutes les
                      ;  lettres, on suppose que le contenu de
                     ;  al est bien une lettre minuscule)
-    ;mov ah , al
-    ;mov bl , 01011111b
-    ;and ah , bl
+    mov ah , al
+    mov bl , 01011111b
+    and ah , bl
 
 
     ; fin

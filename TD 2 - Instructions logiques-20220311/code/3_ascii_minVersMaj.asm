@@ -8,7 +8,7 @@ main:
 
     mov al, 'd' ; on charge une lettre minuscule dans al 
 
-    mov bx ,al      ; à compléter de sorte que ah contienne
+    mov bl ,al      ; à compléter de sorte que ah contienne
     bts bx , 5      ; la même lettre que al mais en majuscule
     ; ........      ; (cela doit fonctionner pour toutes les
                     ;  lettres, on suppose que le contenu de
