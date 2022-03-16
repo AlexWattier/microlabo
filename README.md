@@ -76,3 +76,22 @@ Les labels sont des repère que le programmeur met dans le code afin de donner u
 ### Saut inconditionnel
 
 L’instruction jmp permet d’effectuer un saut vers un certain label. Mais n'effectuera pas les instructions se trouvant entre le jmp et ce label.
+
+### Sauts conditionnels
+
+Les instructions de saut conditionnel permettent d’effectuer un saut si une certaine condition est vraie.
+
+| Instruction | Nom         | Effet |
+| :--------|:-------------|:-|
+| jc label | jump carry | Si CF = 1, on effectue le saut vers le label, sinon on passe à l’instruction suivante|
+| jz label | jump zero | Si ZF = 1, on effectue le saut vers le label, sinon on passe à l’instruction suivante|
+| js label | jump sign | Si SF = 1, on effectue le saut vers le label, sinon on passe à l’instruction suivante|
+| jnc label | jump not carry | Si CF = 0, on effectue le saut vers le label, sinon on passe à l’instruction suivante|
+| jnz label | jump not zero | Si ZF = 0, on effectue le saut vers le label, sinon on passe à l’instruction suivante|
+| jns label | jump not sign | Si SF = 0, on effectue le saut vers le label, sinon on passe à l’instruction suivante|
+
+| Instruction               | Effet                  | Note |
+| :-------------------------|:-----------------------|:-------|
+|bt rax, 0 <br>  jc label   | Saut si rax est impair |rax : représentation par position ou complément à 2 |
+|cmp rax, rbx <br> js label | Saut si rax < rbx      |rax et rbx : cpt. à 2 |
+|cmp rax, rbx <br> jnz label| Saut si rax ̸= rbx      |rax et rbx : rep. / position ou cpt. à 2 |
