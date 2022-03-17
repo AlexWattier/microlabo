@@ -3,12 +3,12 @@
 
 ## General Info
 
-exemple : /x $rax
-/x	hexadecimal	/f	float
-/o	octal	/a	address
-/d	decimal	/i	instruction
-/u	unsigned decimal	/c	char
-/t	binary	/s	string
+exemple : /x $rax   <br>
+/x	hexadecimal	/f	float <br>
+/o	octal	/a	address   <br>
+/d	decimal	/i	instruction   <br>
+/u	unsigned decimal	/c	char  <br>
+/t	binary	/s	string  <br>
  
 ### Instructions logiques
 ****************************************
