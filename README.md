@@ -2,6 +2,13 @@
 
 
 ## General Info
+
+exemple : /x $rax
+/x	hexadecimal	/f	float
+/o	octal	/a	address
+/d	decimal	/i	instruction
+/u	unsigned decimal	/c	char
+/t	binary	/s	string
  
 ### Instructions logiques
 ****************************************
