@@ -1,4 +1,3 @@
-
 global main
 
 section .rodata
@@ -9,10 +8,12 @@ section .rodata
 
 section .bss
     tab2     RESQ    10
+    
 section .text
+
 main:
     mov rax , 0
-    mov r8 , qword [tab]
+    mov r8  , qword [tab]
     mov r10 , qword [tab]
 pour: 
     cmp rax , [nb_elem] ; comp rax au nbr d element dans le tableau
@@ -27,7 +28,6 @@ grand:
     cmp qword [tab + rax * 8] , r10
     js repete
         mov r10 , qword [tab + rax * 8]
-        
         
 repete:
     inc rax
