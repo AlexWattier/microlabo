@@ -124,12 +124,21 @@ les variables globales sont au nombre de trois : .data, .rodata et .bss. Elles s
 |                8 | DQ                |Define Quadword   |
 
 
+
 |Taille (en bytes) |Pseudo-instruction |Signification     |
 |:-----------------|:------------------|:-----------------|
 |                1 | RESB                |Reserve Byte       |
 |                2 | RESW                |Reserve Word       |
 |                4 | RESD                |Reserve Doubleword |
 |                8 | RESQ                |Reserve Quadword   |
+
+|Taille (en bytes) |Spécificateur|
+|:-----------------|:------------|
+|                1 | byte        |
+|                2 | word        |      
+|                4 | dword       |
+|                8 | qword       |
+
 
 
 ```arm
